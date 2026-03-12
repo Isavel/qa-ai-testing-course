@@ -32,3 +32,9 @@ Day 3 ----------------------------------------
 Learned loops
 Learned Lists
 Executed multiple automated tests
+
+Day 4 ----------------------------------------
+
+Learned functions
+Created reusable validation
+Executed automated tests using functions
