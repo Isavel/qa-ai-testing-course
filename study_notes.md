@@ -1,32 +1,223 @@
-## Day 1 
+## Study Notes
 
-- Installed / verified Python
-- Installed PyCharm
-- Created first automated test
-- Validated response length
-- Installed Python extension in VS Code
-- Created first automated test
-- Learned validation using response length
-- Ran multiple test cases using loop
+### Day 1
 
-## Day 2 
+* Installed Python
+* Configured VS Code
+* Ran first Python script
+* Learned basic execution of Python files
 
-- Learned variables
-- Learned strings
-- Stored responses in variables
-- Validated response length
-- Installed Git
-- Initialized repository
-- Created first commit
+### Day 2
 
-## Day 3 
+* Created first Python test scripts
+* Learned basic validation using `if` statements
+* Initialized Git repository
+* Created GitHub repository
+* Pushed first code to GitHub
 
-- Learned loops
-- Learned Lists
-- Executed multiple automated tests
+### Day 3
 
-## Day 4 
+* Learned Python lists
+* Used `for` loops to run multiple tests
+* Executed automated test cases using loops
 
-- Learned functions
-- Created reusable validation
-- Executed automated tests using functions
+### Day 4
+
+* Learned Python functions
+* Created reusable validation functions
+* Used functions to structure test logic
+* Executed automated tests using functions
+
+### Day 5
+
+Project organization
+
+Learned how to structure a QA automation project.
+
+Created folders:
+
+* tests
+* data
+* utils
+
+Understood how professional repositories are organized.
+
+Added:
+
+* README.md
+* requirements.txt
+
+Moved test scripts into the `tests` folder.
+
+Learned that Git does not track empty folders and used `.gitkeep`.
+
+---
+
+### Day 6
+
+Python dictionaries and test datasets
+
+Learned how to use dictionaries to structure test data.
+
+Example:
+
+test_case = {
+"response": "Software testing ensures quality",
+"expected_word": "quality"
+}
+
+Created datasets with multiple test cases.
+
+Used dictionaries to simulate structured test inputs.
+
+This structure is commonly used in:
+
+* automated testing
+* API testing
+* AI / LLM evaluation datasets.
+
+---
+
+### Day 7
+
+Python modules and reusable utilities
+
+Learned how to separate reusable logic into modules.
+
+Created:
+
+utils/validators.py
+
+Added reusable validation functions:
+
+* validate_length()
+* validate_keyword()
+
+Imported functions into test scripts using:
+
+from utils.validators import validate_length, validate_keyword
+
+Executed tests using module execution:
+
+python3 -m tests.day7_module_tests
+
+Learned basic project architecture for automation testing.
+
+Structure now includes:
+
+tests → test scripts
+utils → reusable validation logic
+data → test datasets
+
+### Day 8
+
+API Testing and Code Documentation
+
+Learned what an API is and how it is used for communication between systems.
+
+Understood API testing concepts:
+
+* Validating status codes (200, 404, etc.)
+* Validating response content
+* Validating response structure
+
+Learned to use the `requests` library to send HTTP requests in Python.
+
+Example:
+
+import requests
+
+response = requests.get("https://jsonplaceholder.typicode.com/posts")
+
+Worked with JSON data using:
+
+* response.json()
+
+Created API test functions:
+
+* test_api_status()
+* test_response_length()
+
+Validated:
+
+* Status code is 200
+* Response contains data
+
+Added a new validation:
+
+* Checked if response contains expected fields (e.g., userId)
+
+---
+
+Code Documentation
+
+Learned to write professional docstrings in functions.
+
+Example:
+
+def test_api_status():
+"""
+Test that API returns status code 200.
+"""
+
+Understood importance of documenting:
+
+* what the function does
+* inputs
+* expected behavior
+
+---
+
+Key Concepts
+
+QA:
+
+* API testing fundamentals
+* validation of responses
+* test coverage basics
+
+Python:
+
+* requests library
+* JSON handling
+* writing structured test functions
+
+Best Practices:
+
+* reusable functions
+* readable code
+* documentation with docstrings
+
+
+## Week 1 Key Concepts
+
+### QA:
+- test validation
+- expected vs actual result
+- test datasets
+
+### Python:
+- lists
+- loops
+- functions
+- dictionaries
+- modules
+
+### Tools:
+- Git
+- GitHub
+- VS Code
+
+
+## Week 2 Key Concepts
+
+### API
+
+An * API * is a contract that enables communication between software components through well-defined request and response structures, typically over HTTP, allowing systems to exchange data in a standardized and decoupled way.
+
+### Common HTTP Status Code Classes
+- 1xx Informational: The request has been received and the process is continuing. These are temporary, non-final responses.
+- 2xx Success: The request was successfully received, understood, and processed.
+- 3xx Redirection: Further action needs to be taken by the client to complete the request, usually involving a change of URL or method.
+- 4xx Client Error: The request contains bad syntax or cannot be fulfilled due to an issue on the client's end.
+- 5xx Server Error: The server failed to fulfill a valid request due to an internal problem.
