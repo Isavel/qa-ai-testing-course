@@ -188,6 +188,86 @@ Best Practices:
 * readable code
 * documentation with docstrings
 
+### Day 9
+
+Reusable API Client and Basic Framework Structure
+
+Learned how to avoid code duplication by creating reusable functions.
+
+Introduced the concept of abstraction in QA automation:
+
+* Moving repeated logic into reusable modules
+
+Created a new utility file:
+
+* utils/api_client.py
+
+Implemented a reusable function:
+
+def get_request(url):
+"""
+Send a GET request to the given URL.
+"""
+return requests.get(url)
+
+Updated test scripts to use the API client instead of calling requests directly.
+
+Example:
+
+from utils.api_client import get_request
+
+response = get_request(url)
+
+Improved test readability and maintainability.
+
+---
+
+Extended API client functionality
+
+Created an additional helper function:
+
+def get_json(url):
+"""
+Send GET request and return JSON data.
+"""
+response = get_request(url)
+return response.json()
+
+Used this function to simplify test logic.
+
+---
+
+Key Concepts
+
+QA:
+
+* abstraction in test automation
+* reusable components
+* maintainable test design
+
+Python:
+
+* modularization
+* importing custom modules
+* function reuse
+
+Best Practices:
+
+* avoid duplicated code
+* separate test logic from request logic
+* organize code into layers (tests vs utils)
+
+---
+
+Project Structure Update
+
+tests → test cases
+utils → API client + validators
+data → test datasets
+
+Project now follows a basic test automation architecture
+
+
 
 ## Week 1 Key Concepts
 
@@ -213,7 +293,7 @@ Best Practices:
 
 ### API
 
-An * API * is a contract that enables communication between software components through well-defined request and response structures, typically over HTTP, allowing systems to exchange data in a standardized and decoupled way.
+An **API** is a contract that enables communication between software components through well-defined request and response structures, typically over HTTP, allowing systems to exchange data in a standardized and decoupled way.
 
 ### Common HTTP Status Code Classes
 - 1xx Informational: The request has been received and the process is continuing. These are temporary, non-final responses.
