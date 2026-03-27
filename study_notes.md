@@ -187,6 +187,7 @@ Best Practices:
 * reusable functions
 * readable code
 * documentation with docstrings
+---
 
 ### Day 9
 
@@ -267,6 +268,111 @@ data → test datasets
 
 Project now follows a basic test automation architecture
 
+---
+
+### Day 10 
+
+Advanced API Validations (QA Real Approach)
+
+Learned how to perform deeper API validations beyond status codes.
+
+Understood different validation levels in QA:
+
+* Basic: status code validation
+* Intermediate: response structure validation
+* Advanced: data types and business logic validation
+
+---
+
+Implemented multiple validation types:
+
+Validated response structure:
+
+* Checked required fields exist (userId, id, title, body)
+
+Validated data types:
+
+* userId is integer
+* title is string
+
+Validated content:
+
+* Ensured fields are not empty
+
+Validated business rules:
+
+* userId is greater than 0
+
+---
+
+Introduced reusable validation functions
+
+Moved common validation logic to:
+
+* utils/validators.py
+
+Created reusable validators:
+
+def validate_fields_exist(data, required_fields):
+# returns missing fields
+
+def validate_type(value, expected_type):
+# checks data type
+
+def validate_not_empty(value):
+# checks if value is not empty
+
+def validate_greater_than(value, threshold):
+# checks business rule
+
+---
+
+Refactored test code
+
+Separated:
+
+* test logic (tests/)
+* validation logic (utils/validators.py)
+
+Improved:
+
+* readability
+* maintainability
+* scalability
+
+---
+
+Key Concepts
+
+QA:
+
+* deep validation strategies
+* structure vs content validation
+* business logic validation
+
+Python:
+
+* reusable functions
+* modular design
+* cleaner imports
+
+Best Practices:
+
+* avoid duplicated validation logic
+* use helper functions
+* separate concerns (tests vs validations)
+
+---
+
+Project Evolution
+
+Project now includes:
+
+tests → test cases
+utils → API client + validators
+data → datasets
+
+Project is evolving into a mini test automation framework
 
 
 ## Week 1 Key Concepts
